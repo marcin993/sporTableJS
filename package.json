@@ -1,0 +1,24 @@
+{
+  "name": "sportablejs",
+  "version": "1.0.0",
+  "description": "Script for creating dynamic sports tables for web pages.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcin993/sporTableJS.git"
+  },
+  "author": "Marcin Lasecki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcin993/sporTableJS/issues"
+  },
+  "homepage": "https://github.com/marcin993/sporTableJS#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
