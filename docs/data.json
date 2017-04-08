@@ -1,0 +1,90 @@
+{
+    "project": {
+        "name": "The Foo API",
+        "description": "The Foo API: a library for doing X, Y, and Z",
+        "version": "1.2.1",
+        "url": "http://example.com/"
+    },
+    "files": {
+        "js/sporTable.js": {
+            "name": "js/sporTable.js",
+            "modules": {},
+            "classes": {
+                "sporTable": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "sporTable": {
+            "name": "sporTable",
+            "shortname": "sporTable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "js/sporTable.js",
+            "line": 4
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "js/sporTable.js",
+            "line": 16,
+            "description": "Method for quick creation of HTML elements",
+            "itemtype": "method",
+            "name": "createElement",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "HTML tag name",
+                    "type": "String"
+                },
+                {
+                    "name": "style",
+                    "description": "Class name passed as string or classes names passed as an array",
+                    "type": "String/Array"
+                },
+                {
+                    "name": "attr",
+                    "description": "Object with HTML attributes of created element",
+                    "type": "Object"
+                },
+                {
+                    "name": "text",
+                    "description": "Text content of created element",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Ready HTML Element",
+                "type": "Object"
+            },
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 62,
+            "description": "Method validates the passed team object",
+            "itemtype": "method",
+            "name": "checkTeamsObj",
+            "params": [
+                {
+                    "name": "teamsObj",
+                    "description": "Teams object passed in config.teams",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Method return this same object or false in case of failure",
+                "type": "Object/Boolean"
+            },
+            "class": "sporTable"
+        }
+    ],
+    "warnings": []
+}
