@@ -109,7 +109,31 @@
 
                     <ul class="index-list methods">
                             <li class="index-item method">
-                                <a href="#method_checkTeamsObj">checkTeamsObj</a>
+                                <a href="#method_analyzeMatch">analyzeMatch</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_buildFixturesView">buildFixturesView</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_buildResultsObject">buildResultsObject</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_buildTableView">buildTableView</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_buildTeamsObject">buildTeamsObject</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_calculateGoalDifference">calculateGoalDifference</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_calculatePoints">calculatePoints</a>
 
                             </li>
                             <li class="index-item method">
@@ -126,20 +150,20 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_checkTeamsObj" class="method item">
-    <h3 class="name"><code>checkTeamsObj</code></h3>
+<div id="method_analyzeMatch" class="method item">
+    <h3 class="name"><code>analyzeMatch</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>teamsObj</code>
+                        <code>homeArr</code>
+                </li>
+                <li class="arg">
+                        <code>awayArr</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
 
-        <span class="returns-inline">
-            <span class="type">Object/Boolean</span>
-        </span>
 
 
 
@@ -150,7 +174,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/js_sporTable.js.html#l62"><code>js&#x2F;sporTable.js:62</code></a>
+        <a href="../files/js_sporTable.js.html#l106"><code>js&#x2F;sporTable.js:106</code></a>
         </p>
 
 
@@ -158,7 +182,7 @@
     </div>
 
     <div class="description">
-        <p>Method validates the passed team object</p>
+        <p>Method calculate match details and adds them to team object</p>
 
     </div>
 
@@ -167,12 +191,23 @@
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">teamsObj</code>
-                        <span class="type">Object</span>
+                        <code class="param-name">homeArr</code>
+                        <span class="type">Array</span>
 
 
                     <div class="param-description">
-                        <p>Teams object passed in config.teams</p>
+                        <p>Array withe home team name and result</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">awayArr</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>Array withe away team name and result</p>
 
                     </div>
 
@@ -180,15 +215,271 @@
             </ul>
         </div>
 
-        <div class="returns">
-            <h4>Returns:</h4>
 
-            <div class="returns-description">
-                        <span class="type">Object/Boolean</span>:
-                    <p>Method return this same object or false in case of failure</p>
 
-            </div>
+</div>
+<div id="method_buildFixturesView" class="method item">
+    <h3 class="name"><code>buildFixturesView</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l412"><code>js&#x2F;sporTable.js:412</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method for building a fixtures view &amp; initialization method responsible for results object creation.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_buildResultsObject" class="method item">
+    <h3 class="name"><code>buildResultsObject</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roundId</code>
+                </li>
+                <li class="arg">
+                        <code>gameId</code>
+                </li>
+                <li class="arg">
+                        <code>homeTeam</code>
+                </li>
+                <li class="arg">
+                        <code>result</code>
+                </li>
+                <li class="arg">
+                        <code>awayTeam</code>
+                </li>
+            </ul><span class="paren">)</span>
         </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l379"><code>js&#x2F;sporTable.js:379</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method for building a results object</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roundId</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>Round number</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">gameId</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>Match id</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">homeTeam</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>Home team name</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">result</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>Result of the match</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">awayTeam</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>Away team name</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_buildTableView" class="method item">
+    <h3 class="name"><code>buildTableView</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l298"><code>js&#x2F;sporTable.js:298</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method builds table view and adds it to DOM</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_buildTeamsObject" class="method item">
+    <h3 class="name"><code>buildTeamsObject</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l157"><code>js&#x2F;sporTable.js:157</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method build team object needed to generate table. In addition, it erases unnecessary results object.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_calculateGoalDifference" class="method item">
+    <h3 class="name"><code>calculateGoalDifference</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l218"><code>js&#x2F;sporTable.js:218</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method calculate goal difference of the teams</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_calculatePoints" class="method item">
+    <h3 class="name"><code>calculatePoints</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/js_sporTable.js.html#l240"><code>js&#x2F;sporTable.js:240</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Method calculate league points</p>
+
+    </div>
+
+
 
 
 </div>
@@ -225,7 +516,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/js_sporTable.js.html#l16"><code>js&#x2F;sporTable.js:16</code></a>
+        <a href="../files/js_sporTable.js.html#l60"><code>js&#x2F;sporTable.js:60</code></a>
         </p>
 
 

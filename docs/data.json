@@ -34,7 +34,7 @@
     "classitems": [
         {
             "file": "js/sporTable.js",
-            "line": 16,
+            "line": 60,
             "description": "Method for quick creation of HTML elements",
             "itemtype": "method",
             "name": "createElement",
@@ -68,21 +68,97 @@
         },
         {
             "file": "js/sporTable.js",
-            "line": 62,
-            "description": "Method validates the passed team object",
+            "line": 106,
+            "description": "Method calculate match details and adds them to team object",
             "itemtype": "method",
-            "name": "checkTeamsObj",
+            "name": "analyzeMatch",
             "params": [
                 {
-                    "name": "teamsObj",
-                    "description": "Teams object passed in config.teams",
-                    "type": "Object"
+                    "name": "homeArr",
+                    "description": "Array withe home team name and result",
+                    "type": "Array"
+                },
+                {
+                    "name": "awayArr",
+                    "description": "Array withe away team name and result",
+                    "type": "Array"
                 }
             ],
-            "return": {
-                "description": "Method return this same object or false in case of failure",
-                "type": "Object/Boolean"
-            },
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 157,
+            "description": "Method build team object needed to generate table. In addition, it erases unnecessary results object.",
+            "itemtype": "method",
+            "name": "buildTeamsObject",
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 218,
+            "description": "Method calculate goal difference of the teams",
+            "itemtype": "method",
+            "name": "calculateGoalDifference",
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 240,
+            "description": "Method calculate league points",
+            "itemtype": "method",
+            "name": "calculatePoints",
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 298,
+            "description": "Method builds table view and adds it to DOM",
+            "itemtype": "method",
+            "name": "buildTableView",
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 379,
+            "description": "Method for building a results object",
+            "itemtype": "method",
+            "name": "buildResultsObject",
+            "params": [
+                {
+                    "name": "roundId",
+                    "description": "Round number",
+                    "type": "Number"
+                },
+                {
+                    "name": "gameId",
+                    "description": "Match id",
+                    "type": "Number"
+                },
+                {
+                    "name": "homeTeam",
+                    "description": "Home team name",
+                    "type": "String"
+                },
+                {
+                    "name": "result",
+                    "description": "Result of the match",
+                    "type": "String"
+                },
+                {
+                    "name": "awayTeam",
+                    "description": "Away team name",
+                    "type": "String"
+                }
+            ],
+            "class": "sporTable"
+        },
+        {
+            "file": "js/sporTable.js",
+            "line": 412,
+            "description": "Method for building a fixtures view & initialization method responsible for results object creation.",
+            "itemtype": "method",
+            "name": "buildFixturesView",
             "class": "sporTable"
         }
     ],
